@@ -1,6 +1,8 @@
 package atividade.moradia;
 
-public class QuartoHotel extends Quarto {
+import atividade.aluguel.Alugavel;
+
+public class QuartoHotel extends Quarto implements Alugavel {
 
     @Override
     public double valorDiaria() {

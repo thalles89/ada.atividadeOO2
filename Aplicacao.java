@@ -1,5 +1,6 @@
 package atividade;
 
+import atividade.aluguel.Alugavel;
 import atividade.moradia.Quarto;
 import atividade.moradia.QuartoHotel;
 import atividade.pessoa.*;
@@ -25,8 +26,6 @@ public class Aplicacao {
         List<Double> aluguelQuartos = List.of(aluguelQuarto.orcaPreco(new QuartoHotel(), amanda, 5),
         aluguelQuarto.orcaPreco(new QuartoHotel(), amanda, 2));
 
-        System.out.println(aluguelQuarto);
-
         List<Double> aluguelVeiculos = List.of(
                 aluguel.orcaPreco(fusquinha, amanda, 3),
                 aluguel.orcaPreco(fusquinha, amanda, 5),
@@ -37,10 +36,10 @@ public class Aplicacao {
                 aluguel.orcaPreco(jeep, boikoBank, 3),
                 aluguel.orcaPreco(jeep, boikoBank, 5)
         );
+
         System.out.println("ALUGUEL DE VEICULOS");
-        aluguelVeiculos.forEach(
-            System.out::println
-        );
+        aluguelVeiculos.forEach(System.out::println);
+
         System.out.println("ALUGUEL DE QUARTOS");
         aluguelQuartos.forEach(System.out::println);
     }

@@ -3,7 +3,7 @@ package atividade.veiculo;
 
 import atividade.aluguel.Alugavel;
 
-public class CarroPequeno implements Veiculo {
+public class CarroPequeno extends Veiculo implements Alugavel {
     
     final double valorBase = 100;
 

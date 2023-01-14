@@ -2,7 +2,7 @@ package atividade.veiculo;
 
 import atividade.aluguel.Alugavel;
 
-public class CarroMedio implements Veiculo {
+public class CarroMedio extends Veiculo implements Alugavel {
     final double valorBase = 150;
 
     @Override

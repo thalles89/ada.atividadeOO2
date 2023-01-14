@@ -2,6 +2,6 @@ package atividade.veiculo;
 
 import atividade.aluguel.Alugavel;
 
-public interface Veiculo extends Alugavel{
+public abstract class Veiculo implements Alugavel {
 
 }
