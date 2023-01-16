@@ -11,4 +11,9 @@ public class CarroPequeno extends Veiculo implements Alugavel {
     public double valorDiaria() {
         return this.valorBase;
     }
+
+    @Override
+    public String toString() {
+        return " Carro pequeno ";
+    }
 }

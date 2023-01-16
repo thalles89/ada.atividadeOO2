@@ -8,4 +8,9 @@ final double valorBase = 200;
     public double valorDiaria() {
         return this.valorBase;
     }
+
+    @Override
+    public String toString() {
+        return " SUV ";
+    }
 }

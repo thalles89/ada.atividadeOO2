@@ -9,4 +9,11 @@ public class CarroMedio extends Veiculo implements Alugavel {
     public double valorDiaria() {
         return this.valorBase;
     }
+
+    @Override
+    public String toString() {
+        return "CarroMedio{" +
+                "valorBase=" + valorBase +
+                '}';
+    }
 }
