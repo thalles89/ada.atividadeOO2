@@ -12,7 +12,7 @@ public class Historico<Pessoa, T extends Alugavel> {
 
     private final Map<Pessoa, List<Aluguel<T>>>historico;
 
-    public Historico(Pessoa p) {
+    public Historico() {
         historico = new HashMap<>();
     }
 

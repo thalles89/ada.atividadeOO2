@@ -12,8 +12,6 @@ public class CarroMedio extends Veiculo implements Alugavel {
 
     @Override
     public String toString() {
-        return "CarroMedio{" +
-                "valorBase=" + valorBase +
-                '}';
+        return "CarroMedio{valorBase=" + valorBase +'}';
     }
 }

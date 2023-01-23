@@ -14,6 +14,6 @@ public class CarroPequeno extends Veiculo implements Alugavel {
 
     @Override
     public String toString() {
-        return " Carro pequeno ";
+        return " Carro pequeno {valorBase=" + valorBase +'}';
     }
 }

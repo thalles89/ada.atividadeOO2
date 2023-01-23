@@ -23,7 +23,7 @@ public class Aplicacao {
         var amanda = new Fisica();
         var boikoBank = new Juridica();
 
-        var historico = new Historico<Pessoa, Veiculo>(amanda);
+        var historico = new Historico<Pessoa, Veiculo>();
 
         List<Aluguel<Veiculo>> aluguelVeiculos = List.of(new Aluguel<>(fusquinha, amanda, 3),
         new Aluguel<>(fusquinha, amanda, 5),

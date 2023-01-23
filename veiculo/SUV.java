@@ -3,7 +3,7 @@ package atividade.veiculo;
 import atividade.aluguel.Alugavel;
 
 public class SUV extends Veiculo implements Alugavel {
-final double valorBase = 200;
+    final double valorBase = 200;
 
     public double valorDiaria() {
         return this.valorBase;
@@ -11,6 +11,6 @@ final double valorBase = 200;
 
     @Override
     public String toString() {
-        return " SUV ";
+        return " SUV {valorBase=" + valorBase + '}';
     }
 }
