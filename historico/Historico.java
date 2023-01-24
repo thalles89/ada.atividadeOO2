@@ -30,4 +30,5 @@ public class Historico<Pessoa, T extends Alugavel> {
     public List<Aluguel<T>> getHistorico(Pessoa pessoa) {
         return (historico.get(pessoa));
     }
+
 }

@@ -1,4 +1,5 @@
 package atividade.pessoa;
-public interface Pessoa {
-    double calculaDesconto(int dias);
+public abstract class Pessoa {
+    public abstract double getPercentualDeDesconto();
+    public abstract int getDiasNecessariosParaDesconto();
 }

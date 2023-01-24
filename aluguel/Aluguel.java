@@ -2,13 +2,11 @@ package atividade.aluguel;
 
 import atividade.pessoa.Pessoa;
 
-import java.util.*;
-
 public class Aluguel<T extends Alugavel> {
 
     private Double valorOrcado;
     private final T alugavel;
-    private final Pessoa cliente;
+    private Pessoa cliente;
     private final int dias;
 
     public Aluguel(T alugavel, Pessoa cliente, int dias) {
@@ -17,17 +15,25 @@ public class Aluguel<T extends Alugavel> {
         this.dias = dias;
     }
 
-    public double orcaPreco() {
-        valorOrcado = (1 - cliente.calculaDesconto(dias)) * alugavel.valorDiaria() * dias;
-        return valorOrcado;
+    public Aluguel<T> orcaPreco() {
+        valorOrcado = alugavel.valorDiaria() * dias;
+        return this;
     }
 
     @Override
     public String toString() {
-        return String.valueOf(valorOrcado);
+        return alugavel.toString();
     }
 
     public Pessoa getCliente() {
         return cliente;
+    }
+
+    public Double getValorOrcado() {
+        return valorOrcado;
+    }
+
+    public int getDias() {
+        return dias;
     }
 }
