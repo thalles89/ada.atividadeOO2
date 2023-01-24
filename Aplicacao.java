@@ -43,12 +43,18 @@ public class Aplicacao {
         var fatura = new Fatura<>(aluguelVeiculos);
 
         System.out.printf("Valor de desconto amanda: %s", fatura.calcularDesconto(amanda));
-
+        System.out.println();
         System.out.printf("Valor Total amanda: %s", fatura.calcularTotal(amanda));
+        System.out.println();
+        System.out.println(fatura);
+
 
         System.out.printf("Calculo desconto boikoBank: %s",fatura.calcularDesconto(boikoBank));
-
+        System.out.println();
         System.out.printf("Calculo Total: %s",fatura.calcularTotal(boikoBank));
+        System.out.println();
+        System.out.println(fatura);
+
 
 //        fatura.imprimir();
         System.out.println("Alugueis do BoikoBank");
@@ -56,6 +62,7 @@ public class Aplicacao {
 
         System.out.println("Alugueis do Amanda");
         System.out.println(historico.getHistorico(amanda));
+
 
     }
 

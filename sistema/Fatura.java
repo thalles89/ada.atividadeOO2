@@ -10,7 +10,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 public class Fatura<T extends Alugavel> {
 
-
+    private double valorTotal;
+    private double descontoTotal;
     private final List<Aluguel<T>> listaAlugueis;
 
     public Fatura(List<Aluguel<T>> lista){
@@ -24,6 +25,7 @@ public class Fatura<T extends Alugavel> {
             value.updateAndGet(v -> v + it.getValorOrcado());
         });
         value.updateAndGet(v -> v - calcularDesconto(pessoa));
+        valorTotal = value.get();
         return value.get();
     }
 
@@ -34,13 +36,17 @@ public class Fatura<T extends Alugavel> {
                 value.updateAndGet(v -> v + it.getValorOrcado() * pessoa.getPercentualDeDesconto());
             }
         });
+        descontoTotal = value.get();
         return value.get();
     }
+
 
     @Override
     public String toString() {
         return "Fatura{" +
-                "listaAlugueis=" + listaAlugueis +
+                "valorTotal=" + valorTotal +
+                "descontoTotal=" + descontoTotal +
+                ", listaAlugueis=" + listaAlugueis +
                 '}';
     }
 }
